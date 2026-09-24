@@ -1,3 +1,5 @@
+import { styles } from "./SectionHeading.styles";
+
 export default function SectionHeading({
   as: Tag = "h2",
   id,
@@ -10,10 +12,7 @@ export default function SectionHeading({
   children: React.ReactNode;
 }) {
   return (
-    <Tag
-      id={id}
-      className={`scroll-mt-16 text-sm font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-500 ${className}`}
-    >
+    <Tag id={id} className={styles.heading(className)}>
       {children}
     </Tag>
   );

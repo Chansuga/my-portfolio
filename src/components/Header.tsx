@@ -1,5 +1,5 @@
 import { profile } from "@/data/site";
-import { linkHover } from "@/lib/styles";
+import { styles } from "./Header.styles";
 
 const navItems = [
   { href: "#about", label: "About" },
@@ -10,18 +10,14 @@ const navItems = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-black/8 bg-white/80 backdrop-blur dark:border-white/8 dark:bg-black/80">
-      <div className="mx-auto flex h-16 max-w-4xl items-center justify-between px-6">
-        <a href="#top" className="font-semibold tracking-tight">
+    <header className={styles.header}>
+      <div className={styles.container}>
+        <a href="#top" className={styles.logo}>
           {profile.name}
         </a>
-        <nav className="flex gap-6 text-sm text-zinc-600 dark:text-zinc-400">
+        <nav className={styles.nav}>
           {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className={`transition-colors ${linkHover}`}
-            >
+            <a key={item.href} href={item.href} className={styles.navLink}>
               {item.label}
             </a>
           ))}
