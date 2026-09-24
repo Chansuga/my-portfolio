@@ -35,8 +35,8 @@ export const career: CareerItem[] = [
   },
   {
     org: "独立系IT企業 AI・データ分析事業部",
-    role: "在籍中",
-    period: "2024年4月 - 現在",
+    role: "退職予定",
+    period: "2024年4月 - 2026年10月",
   },
 ];
 
@@ -44,32 +44,53 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
+  period?: string;
   link?: string;
   repo?: string;
 };
 
 export const projects: Project[] = [
   {
-    title: "プロジェクト名 1",
+    title: "RAGシステム用データ前処理システムの研究開発",
     description:
-      "このプロジェクトの概要、解決した課題、使用技術について説明します。",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    link: "https://example.com",
-    repo: "https://github.com/yourname/project-one",
+      "社内ドキュメント（PDF）を読み込んで，RAGのベクトル検索用のチャンクテキストを自動生成するシステムの開発",
+    tags: [
+      "Python",
+      "FastAPI",
+      "Streamlit",
+      "LangChain",
+      "PostgreSQL",
+      "AzureOpenAI",
+    ],
+    period: "2024年4月 - 2025年4月",
+    link: "",
+    repo: "",
   },
   {
-    title: "プロジェクト名 2",
+    title: "RAG手法調査案件",
     description:
-      "このプロジェクトの概要、解決した課題、使用技術について説明します。",
-    tags: ["React", "Node.js", "PostgreSQL"],
-    repo: "https://github.com/yourname/project-two",
+      "RAGシステムにおける，手法についての調査と精度比較検証を行う案件",
+    tags: [
+      "Python",
+      "Streamlit",
+      "LangChain",
+      "ChromaDB",
+      "AmazonBedrock",
+      "AzureOpenAI",
+      "BM25",
+      "Ragas",
+      "Neo4j",
+    ],
+    period: "2025年5月 - 2025年8月",
+    repo: "",
   },
   {
-    title: "プロジェクト名 3",
+    title: "商標利用の申請フローの自動化ツールの開発",
     description:
-      "このプロジェクトの概要、解決した課題、使用技術について説明します。",
-    tags: ["Python", "FastAPI"],
-    link: "https://example.com",
+      "Microsoft Power Platformを用いた，商標利用の申請フローの自動化ツールの開発",
+    tags: ["PowerApps", "PowerAutomate", "Dataverse"],
+    period: "2026年4月 - 2026年8月",
+    link: "",
   },
 ];
 

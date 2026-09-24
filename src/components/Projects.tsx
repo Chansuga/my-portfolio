@@ -17,9 +17,16 @@ export default function Projects() {
               key={project.title}
               className="flex flex-col rounded-2xl border border-black/8 p-6 transition-colors hover:border-black/16 dark:border-white/10 dark:hover:border-white/20"
             >
-              <h3 className="text-lg font-semibold text-zinc-950 dark:text-zinc-50">
-                {project.title}
-              </h3>
+              <div className="flex items-baseline justify-between gap-2">
+                <h3 className="text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  {project.title}
+                </h3>
+                {project.period && (
+                  <span className="shrink-0 text-xs text-zinc-500 dark:text-zinc-400">
+                    {project.period}
+                  </span>
+                )}
+              </div>
               <p className="mt-2 flex-1 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
                 {project.description}
               </p>
