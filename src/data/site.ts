@@ -1,5 +1,5 @@
 export const profile = {
-  name: "須賀 勇貴",
+  name: "Yuki Suga",
   role: "Software Engineer",
   tagline:
     "I build fast, reliable, and thoughtfully designed web applications.",
