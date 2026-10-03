@@ -42,7 +42,7 @@ src/
 │   └── globals.css       # グローバルCSS・Tailwindの読み込み
 ├── components/           # 画面を構成するUIコンポーネント
 │   ├── Header.tsx / Header.styles.ts
-│   ├── Hero.tsx / Hero.styles.ts
+│   ├── Cover.tsx / Cover.styles.ts
 │   ├── About.tsx / About.styles.ts
 │   ├── Projects.tsx / Projects.styles.ts
 │   ├── Skills.tsx / Skills.styles.ts
