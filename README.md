@@ -40,8 +40,8 @@ src/
 └── lib/
     └── styles.ts         # 複数コンポーネントで共有するTailwindクラス定数
 public/                   # 静的ファイル
-├── avatar.png            # プロフィール画像
-└── image.png             # カバー画像
+├── image.jpg             # カバー画像
+└── self_image.jpg        # About の写真
 next.config.ts            # Next.js の設定(静的エクスポート・basePath など)
 ```
 
@@ -117,7 +117,7 @@ GitHub Pages は静的ファイルの配信のみに対応しているため、`
 `next/image` の `src` には `basePath` が自動で付かないため、`public/` の画像を参照するときは次のように書きます。
 
 ```tsx
-<Image src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/image.png`} alt="" />
+<Image src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/image.jpg`} alt="" />
 ```
 
 ### 開発の流れ
