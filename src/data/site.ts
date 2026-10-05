@@ -94,6 +94,50 @@ export const projects: Project[] = [
   },
 ];
 
+export type Work = {
+  title: string;
+  description: string;
+  tags: string[];
+  period?: string;
+  link?: string;
+  repo: string;
+};
+
+export const works: Work[] = [
+  {
+    title: "ポートフォリオサイト",
+    description:
+      "このサイト。経歴・プロジェクト・スキルなどをまとめた静的サイトで，GitHub Actionsでlint・型チェック・ビルドを行い，GitHub Pagesへ自動デプロイ",
+    tags: [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "GitHub Actions",
+      "GitHub Pages",
+    ],
+    period: "2026年9月 -",
+    link: "https://chansuga.github.io/my-portfolio/",
+    repo: "https://github.com/Chansuga/my-portfolio",
+  },
+  {
+    title: "資産管理アプリ",
+    description:
+      "家族・個人の資産を月次で管理するWebアプリ。Owner・口座ごとの月次残高を入力し，金融資産の推移をグラフと表で可視化。JSONでのエクスポート/インポートにも対応",
+    tags: [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "Prisma",
+      "SQLite",
+      "Recharts",
+      "Docker",
+    ],
+    period: "2026年6月 -",
+    repo: "https://github.com/Chansuga/personal_finance_app",
+  },
+];
+
 export type SkillEntry = {
   name: string;
   items?: string[];

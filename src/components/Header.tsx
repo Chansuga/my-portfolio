@@ -4,6 +4,7 @@ import { styles } from "./Header.styles";
 const navItems = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
+  { href: "#works", label: "Works" },
   { href: "#skills", label: "Skills" },
   { href: "#certifications", label: "Certifications" },
 ];
