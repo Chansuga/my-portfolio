@@ -6,7 +6,7 @@ export default function Cover() {
   return (
     <section id="top" className={styles.section}>
       <Image
-        src="/image.png"
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/image.png`}
         alt=""
         fill
         preload
