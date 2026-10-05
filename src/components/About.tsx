@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
 import { career, profile } from "@/data/site";
 import { styles } from "./About.styles";
@@ -7,8 +8,19 @@ export default function About() {
     <section id="about" className={styles.section}>
       <div className={styles.container}>
         <SectionHeading>About</SectionHeading>
-        <p className={styles.bio}>{profile.bio}</p>
-        <p className={styles.location}>{profile.location}</p>
+        <div className={styles.intro}>
+          <Image
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${profile.photo}`}
+            alt={profile.name}
+            width={306}
+            height={412}
+            className={styles.photo}
+          />
+          <div>
+            <p className={styles.bio}>{profile.bio}</p>
+            <p className={styles.location}>{profile.location}</p>
+          </div>
+        </div>
 
         <SectionHeading as="h3" className={styles.careerHeading}>
           Career
