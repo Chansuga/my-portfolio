@@ -5,7 +5,7 @@ export const profile = {
     "I build fast, reliable, and thoughtfully designed web applications.",
   bio: "大学・大学院では素粒子理論物理学を専攻していました。大学院時代にAI技術に魅了され、独学でAI・機械学習とPythonを学習。新卒でIT企業に入社し、現在は生成AIを活用した開発を行う事業部で、チャットボットシステムやRAGシステムの実装、精度改善、精度比較検証などに取り組んでいます。",
   location: "Saitama, Japan",
-  avatar: "/avatar.png",
+  photo: "/self_image.jpg",
   social: {
     github: "https://github.com/Chansuga",
     email: "sugayuki99327@gmail.com",
