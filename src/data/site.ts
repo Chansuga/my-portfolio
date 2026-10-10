@@ -200,7 +200,7 @@ export const skills: SkillGroup[] = [
 export type Certification = {
   name: string;
   org: string;
-  acquired: { year: number; month: number };
+  acquired: { year: number; month: number; day?: number };
 };
 
 export const certifications: Certification[] = [
@@ -212,12 +212,12 @@ export const certifications: Certification[] = [
   {
     name: "G検定(ジェネラリスト検定)",
     org: "JDLA(日本ディープラーニング協会)",
-    acquired: { year: 2023, month: 6 },
+    acquired: { year: 2023, month: 5, day: 13 },
   },
   {
     name: "Oracle Certified Java Programmer, Bronze SE",
     org: "Oracle",
-    acquired: { year: 2024, month: 1 },
+    acquired: { year: 2024, month: 1, day: 13 },
   },
   {
     name: "普通自動車第一種運転免許",
