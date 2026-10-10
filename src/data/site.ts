@@ -102,6 +102,7 @@ export type Work = {
   period?: string;
   link?: string;
   repo: string;
+  image?: string;
 };
 
 export const works: Work[] = [
@@ -120,6 +121,7 @@ export const works: Work[] = [
     period: "2026年9月 -",
     link: "https://chansuga.github.io/my-portfolio/",
     repo: "https://github.com/Chansuga/my-portfolio",
+    image: "/portfolio.png",
   },
   {
     title: "資産管理アプリ",
