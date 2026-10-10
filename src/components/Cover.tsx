@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/basePath";
 import { profile } from "@/data/site";
 import { styles } from "./Cover.styles";
 
@@ -6,7 +7,7 @@ export default function Cover() {
   return (
     <section id="top" className={styles.section}>
       <Image
-        src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/image.jpg`}
+        src={withBasePath("/image.jpg")}
         alt=""
         fill
         preload
@@ -14,7 +15,7 @@ export default function Cover() {
         className={styles.background}
       />
       <div className={styles.content}>
-        <h1 className={styles.title}>Yuki Suga&apos;s portfolio</h1>
+        <h1 className={styles.title}>{profile.name}&apos;s portfolio</h1>
         <p className={styles.role}>{profile.role}</p>
       </div>
     </section>

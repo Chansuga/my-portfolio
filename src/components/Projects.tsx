@@ -1,4 +1,5 @@
 import Chip from "@/components/Chip";
+import ExternalLink from "@/components/ExternalLink";
 import SectionHeading from "@/components/SectionHeading";
 import { projects } from "@/data/site";
 import { styles } from "./Projects.styles";
@@ -25,24 +26,14 @@ export default function Projects() {
               </ul>
               <div className={styles.linksRow}>
                 {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.link}
-                  >
+                  <ExternalLink href={project.link} className={styles.link}>
                     Live
-                  </a>
+                  </ExternalLink>
                 )}
                 {project.repo && (
-                  <a
-                    href={project.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.link}
-                  >
+                  <ExternalLink href={project.repo} className={styles.link}>
                     Code
-                  </a>
+                  </ExternalLink>
                 )}
               </div>
             </article>

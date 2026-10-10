@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/basePath";
 import Chip from "@/components/Chip";
+import ExternalLink from "@/components/ExternalLink";
 import SectionHeading from "@/components/SectionHeading";
 import { works } from "@/data/site";
 import { styles } from "./Works.styles";
@@ -7,7 +9,7 @@ import { styles } from "./Works.styles";
 function WorkImage({ src, alt }: { src: string; alt: string }) {
   return (
     <Image
-      src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${src}`}
+      src={withBasePath(src)}
       alt={alt}
       fill
       sizes="(min-width: 640px) 400px, 100vw"
@@ -35,14 +37,9 @@ export default function Works() {
               >
                 {work.image ? (
                   work.link ? (
-                    <a
-                      href={work.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.imageLink}
-                    >
+                    <ExternalLink href={work.link} className={styles.imageLink}>
                       <WorkImage src={work.image} alt={work.title} />
-                    </a>
+                    </ExternalLink>
                   ) : (
                     <WorkImage src={work.image} alt={work.title} />
                   )
@@ -58,24 +55,14 @@ export default function Works() {
               </ul>
               <div className={styles.linksRow}>
                 {work.link && (
-                  <a
-                    href={work.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.link}
-                  >
+                  <ExternalLink href={work.link} className={styles.link}>
                     Site
-                  </a>
+                  </ExternalLink>
                 )}
                 {work.repo && (
-                  <a
-                    href={work.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.link}
-                  >
+                  <ExternalLink href={work.repo} className={styles.link}>
                     GitHub
-                  </a>
+                  </ExternalLink>
                 )}
               </div>
             </article>
