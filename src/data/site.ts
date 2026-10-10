@@ -200,33 +200,38 @@ export const skills: SkillGroup[] = [
 export type Certification = {
   name: string;
   org: string;
-  note?: string;
+  acquired: { year: number; month: number };
 };
 
 export const certifications: Certification[] = [
   {
     name: "ITパスポート試験",
     org: "IPA(独立行政法人情報処理推進機構)",
-    note: "2023年取得",
+    acquired: { year: 2023, month: 10 },
   },
   {
     name: "G検定(ジェネラリスト検定)",
     org: "JDLA(日本ディープラーニング協会)",
-    note: "2023年6月取得",
+    acquired: { year: 2023, month: 6 },
   },
   {
     name: "Oracle Certified Java Programmer, Bronze SE",
     org: "Oracle",
-    note: "2023年取得",
+    acquired: { year: 2024, month: 1 },
   },
   {
     name: "普通自動車第一種運転免許",
     org: "公安委員会",
-    note: "2019年8月取得",
+    acquired: { year: 2019, month: 8 },
   },
   {
     name: "AWS Certified Solutions Architect - Associate",
     org: "Amazon Web Services",
-    note: "2023年8月取得",
+    acquired: { year: 2023, month: 8 },
+  },
+  {
+    name: "AWS Certified Cloud Practitioner",
+    org: "Amazon Web Services",
+    acquired: { year: 2023, month: 7 },
   },
 ];

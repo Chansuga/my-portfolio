@@ -3,6 +3,12 @@ import SectionHeading from "@/components/SectionHeading";
 import { certifications, skills } from "@/data/site";
 import { styles } from "./Skills.styles";
 
+const sortedCertifications = [...certifications].sort(
+  (a, b) =>
+    a.acquired.year * 12 + a.acquired.month -
+    (b.acquired.year * 12 + b.acquired.month),
+);
+
 export default function Skills() {
   return (
     <section id="skills" className={styles.section}>
@@ -41,7 +47,7 @@ export default function Skills() {
           Certifications
         </SectionHeading>
         <ul className={styles.certGrid}>
-          {certifications.map((cert) => (
+          {sortedCertifications.map((cert) => (
             <li key={cert.name} className={styles.certItem}>
               <svg
                 viewBox="0 0 24 24"
@@ -54,9 +60,9 @@ export default function Skills() {
               </svg>
               <div>
                 <p className={styles.certName}>{cert.name}</p>
-                <p className={styles.certOrg}>
-                  {cert.org}
-                  {cert.note ? ` ・ ${cert.note}` : ""}
+                <p className={styles.certOrg}>{cert.org}</p>
+                <p className={styles.certDate}>
+                  取得時期：{cert.acquired.year}年{cert.acquired.month}月
                 </p>
               </div>
             </li>
