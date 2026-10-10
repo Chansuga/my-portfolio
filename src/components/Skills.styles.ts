@@ -18,4 +18,5 @@ export const styles = {
   certName:
     "text-sm font-medium leading-5 text-zinc-950",
   certOrg: "mt-1 text-xs text-zinc-500",
+  certDate: "mt-0.5 text-xs text-zinc-400",
 };
