@@ -52,9 +52,9 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "RAGシステム用データ前処理システムの研究開発",
+    title: "RAG専用のドキュメント前処理システムの研究開発",
     description:
-      "社内ドキュメント（PDF）を読み込んで，RAGのベクトル検索用のチャンクテキストを自動生成するシステムの開発",
+      "PDFの社内ドキュメントを読み込んで、RAGのベクトル検索用のチャンクテキストを自動生成するシステムの開発にエンジニアとして携わりました。特にPDF内の図や表のテキスト化によるマルチモーダル化に力を入れました。",
     tags: [
       "Python",
       "FastAPI",
@@ -70,7 +70,7 @@ export const projects: Project[] = [
   {
     title: "RAG手法調査案件",
     description:
-      "RAGシステムにおける，手法についての調査と精度比較検証を行う案件",
+      "RAGシステムにおける，手法についての調査と精度比較検証を行う案件に作業メンバーとして携わりました。",
     tags: [
       "Python",
       "Streamlit",
