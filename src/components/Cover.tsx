@@ -15,7 +15,7 @@ export default function Cover() {
         className={styles.background}
       />
       <div className={styles.content}>
-        <h1 className={styles.title}>Yuki Suga&apos;s portfolio</h1>
+        <h1 className={styles.title}>{profile.name}&apos;s portfolio</h1>
         <p className={styles.role}>{profile.role}</p>
       </div>
     </section>
