@@ -64,8 +64,6 @@ export const projects: Project[] = [
       "AzureOpenAI",
     ],
     period: "2024年4月 - 2025年4月",
-    link: "",
-    repo: "",
   },
   {
     title: "RAG手法調査案件",
@@ -83,7 +81,6 @@ export const projects: Project[] = [
       "Neo4j",
     ],
     period: "2025年5月 - 2025年8月",
-    repo: "",
   },
   {
     title: "商標利用の申請フローの自動化ツールの開発",
@@ -91,7 +88,6 @@ export const projects: Project[] = [
       "Microsoft Power Platformを用いた，商標利用の申請フローの自動化ツールの開発",
     tags: ["PowerApps", "PowerAutomate", "Dataverse"],
     period: "2026年4月 - 2026年8月",
-    link: "",
   },
 ];
 
@@ -101,7 +97,7 @@ export type Work = {
   tags: string[];
   period?: string;
   link?: string;
-  repo: string;
+  repo?: string;
   image?: string;
 };
 
