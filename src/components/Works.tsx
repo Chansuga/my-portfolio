@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Chip from "@/components/Chip";
 import SectionHeading from "@/components/SectionHeading";
 import { works } from "@/data/site";
@@ -15,6 +16,21 @@ export default function Works() {
                 <h3 className={styles.title}>{work.title}</h3>
                 {work.period && (
                   <span className={styles.period}>{work.period}</span>
+                )}
+              </div>
+              <div
+                className={`${styles.imageFrame} ${work.image ? "" : styles.emptyImageFrame}`}
+              >
+                {work.image ? (
+                  <Image
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${work.image}`}
+                    alt={work.title}
+                    fill
+                    sizes="(min-width: 640px) 400px, 100vw"
+                    className={styles.image}
+                  />
+                ) : (
+                  <span className={styles.noImage}>No Image</span>
                 )}
               </div>
               <p className={styles.description}>{work.description}</p>
