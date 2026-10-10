@@ -3,7 +3,7 @@ export const styles = {
   container: "mx-auto max-w-4xl px-6",
   intro: "mt-6 flex flex-col items-center gap-8 sm:flex-row",
   photo: "w-40 shrink-0 object-cover sm:w-48",
-  bio: "text-lg leading-8 text-zinc-700",
+  bio: "whitespace-pre-line text-lg leading-8 text-zinc-700",
   location: "mt-4 text-sm text-zinc-500",
   careerHeading: "mt-12",
   timeline: "mt-6 flex flex-col gap-6",
