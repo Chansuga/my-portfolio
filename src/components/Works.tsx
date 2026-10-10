@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/basePath";
 import Chip from "@/components/Chip";
 import SectionHeading from "@/components/SectionHeading";
 import { works } from "@/data/site";
@@ -7,7 +8,7 @@ import { styles } from "./Works.styles";
 function WorkImage({ src, alt }: { src: string; alt: string }) {
   return (
     <Image
-      src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${src}`}
+      src={withBasePath(src)}
       alt={alt}
       fill
       sizes="(min-width: 640px) 400px, 100vw"

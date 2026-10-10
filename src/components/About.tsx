@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/basePath";
 import SectionHeading from "@/components/SectionHeading";
 import { career, profile } from "@/data/site";
 import { styles } from "./About.styles";
@@ -10,7 +11,7 @@ export default function About() {
         <SectionHeading>About</SectionHeading>
         <div className={styles.intro}>
           <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${profile.photo}`}
+            src={withBasePath(profile.photo)}
             alt={profile.name}
             width={306}
             height={412}
