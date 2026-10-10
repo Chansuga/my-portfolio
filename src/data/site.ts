@@ -121,7 +121,7 @@ export const works: Work[] = [
     period: "2026年9月 -",
     link: "https://chansuga.github.io/my-portfolio/",
     repo: "https://github.com/Chansuga/my-portfolio",
-    image: "/portfolio.png",
+    image: "/portfolio.webp",
   },
   {
     title: "資産管理アプリ",
