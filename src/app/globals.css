@@ -13,3 +13,8 @@
     var(--font-geist-sans), "Hiragino Sans", "Hiragino Kaku Gothic ProN",
     Meiryo, sans-serif;
 }
+
+/* モーダル表示中は背面のページをスクロールさせない */
+html:has(dialog[open]) {
+  overflow: hidden;
+}

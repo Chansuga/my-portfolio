@@ -43,18 +43,21 @@ export const career: CareerItem[] = [
 
 export type Project = {
   title: string;
-  description: string;
-  tags: string[];
   period?: string;
-  link?: string;
-  repo?: string;
+  teamSize: string;
+  position: string;
+  tags: string[];
+  overview: string;
+  responsibilities: string[];
+  achievements: string[];
 };
 
 export const projects: Project[] = [
   {
     title: "RAG専用のドキュメント前処理システムの研究開発",
-    description:
-      "PDFの社内ドキュメントを読み込んで、RAGのベクトル検索用のチャンクテキストを自動生成するシステムの開発にエンジニアとして携わりました。特にPDF内の図や表のテキスト化によるマルチモーダル化に力を入れました。",
+    period: "2024年4月 - 2025年4月",
+    teamSize: "〇人",
+    position: "未設定",
     tags: [
       "Python",
       "FastAPI",
@@ -63,12 +66,16 @@ export const projects: Project[] = [
       "PostgreSQL",
       "AzureOpenAI",
     ],
-    period: "2024年4月 - 2025年4月",
+    overview:
+      "PDFの社内ドキュメントを読み込んで、RAGのベクトル検索用のチャンクテキストを自動生成するシステムの開発にエンジニアとして携わりました。特にPDF内の図や表のテキスト化によるマルチモーダル化に力を入れました。",
+    responsibilities: ["未設定"],
+    achievements: ["未設定"],
   },
   {
     title: "RAG手法調査案件",
-    description:
-      "RAGシステムにおける，手法についての調査と精度比較検証を行う案件に作業メンバーとして携わりました。",
+    period: "2025年5月 - 2025年8月",
+    teamSize: "〇人",
+    position: "未設定",
     tags: [
       "Python",
       "Streamlit",
@@ -80,14 +87,21 @@ export const projects: Project[] = [
       "Ragas",
       "Neo4j",
     ],
-    period: "2025年5月 - 2025年8月",
+    overview:
+      "RAGシステムにおける，手法についての調査と精度比較検証を行う案件に作業メンバーとして携わりました。",
+    responsibilities: ["未設定"],
+    achievements: ["未設定"],
   },
   {
     title: "商標利用の申請フローの自動化ツールの開発",
-    description:
-      "Microsoft Power Platformを用いた，商標利用の申請フローの自動化ツールの開発",
-    tags: ["PowerApps", "PowerAutomate", "Dataverse"],
     period: "2026年4月 - 2026年8月",
+    teamSize: "〇人",
+    position: "未設定",
+    tags: ["PowerApps", "PowerAutomate", "Dataverse"],
+    overview:
+      "Microsoft Power Platformを用いた，商標利用の申請フローの自動化ツールの開発",
+    responsibilities: ["未設定"],
+    achievements: ["未設定"],
   },
 ];
 
