@@ -1,3 +1,5 @@
+import type { DateParts } from "@/lib/date";
+
 export const profile = {
   name: "Yuki Suga",
   role: "Software Engineer",
@@ -43,7 +45,9 @@ export const career: CareerItem[] = [
 
 export type Project = {
   title: string;
-  period?: string;
+  start: DateParts;
+  // 未入力の場合は参画中として扱う
+  end?: DateParts;
   teamSize: string;
   position: string;
   tags: string[];
@@ -55,7 +59,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "RAG専用のドキュメント前処理システムの研究開発",
-    period: "2024年4月 - 2026年4月",
+    start: { year: 2024, month: 4 },
+    end: { year: 2026, month: 4 },
     teamSize: "4人~5人",
     position: "開発エンジニア",
     tags: [
@@ -79,7 +84,8 @@ export const projects: Project[] = [
   },
   {
     title: "RAG手法調査案件",
-    period: "2025年5月 - 2025年8月",
+    start: { year: 2025, month: 5 },
+    end: { year: 2025, month: 8 },
     teamSize: "8人",
     position: "調査員",
     tags: [
@@ -100,7 +106,8 @@ export const projects: Project[] = [
   },
   {
     title: "商標利用の申請フローの自動化ツールの開発",
-    period: "2026年4月 - 2026年8月",
+    start: { year: 2026, month: 4 },
+    end: { year: 2026, month: 8 },
     teamSize: "5人",
     position: "エンジニア",
     tags: ["PowerApps", "PowerAutomate", "Dataverse", "MicrosoftForms"],
@@ -224,7 +231,7 @@ export const skills: SkillGroup[] = [
 export type Certification = {
   name: string;
   org: string;
-  acquired: { year: number; month: number; day?: number };
+  acquired: DateParts;
 };
 
 export const certifications: Certification[] = [

@@ -4,12 +4,20 @@ import { useEffect, useRef, useState } from "react";
 import Chip from "@/components/Chip";
 import SectionHeading from "@/components/SectionHeading";
 import { projects, type Project } from "@/data/site";
+import { dateSortKey, formatDate } from "@/lib/date";
 import { styles } from "./Projects.styles";
+
+const sortedProjects = [...projects].sort(
+  (a, b) => dateSortKey(a.start) - dateSortKey(b.start),
+);
 
 function ProjectMeta({ project }: { project: Project }) {
   return (
     <>
-      {project.period && <p className={styles.period}>{project.period}</p>}
+      <p className={styles.period}>
+        {formatDate(project.start)} -{" "}
+        {project.end ? formatDate(project.end) : "現在"}
+      </p>
       <dl className={styles.meta}>
         <div className={styles.metaRow}>
           <dt className={styles.metaLabel}>規模</dt>
@@ -56,7 +64,7 @@ export default function Projects() {
       <div className={styles.container}>
         <SectionHeading>Projects</SectionHeading>
         <div className={styles.grid}>
-          {projects.map((project) => (
+          {sortedProjects.map((project) => (
             <article key={project.title} className={styles.card}>
               <h3 className={styles.title}>
                 <button
