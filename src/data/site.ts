@@ -55,27 +55,33 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "RAG専用のドキュメント前処理システムの研究開発",
-    period: "2024年4月 - 2025年4月",
-    teamSize: "〇人",
-    position: "未設定",
+    period: "2024年4月 - 2026年4月",
+    teamSize: "4人~5人",
+    position: "開発エンジニア",
     tags: [
       "Python",
       "FastAPI",
-      "Streamlit",
+      "Gradio",
       "LangChain",
-      "PostgreSQL",
+      "PostgreSQL(pgvector)",
       "AzureOpenAI",
+      "AWS ECR",
     ],
     overview:
       "PDFの社内ドキュメントを読み込んで、RAGのベクトル検索用のチャンクテキストを自動生成するシステムの開発にエンジニアとして携わりました。特にPDF内の図や表のテキスト化によるマルチモーダル化に力を入れました。",
-    responsibilities: ["未設定"],
+    responsibilities: [
+      "実装全般（AWS ECRを利用したDockerイメージのビルド・登録・配布，デモ用RAGシステム＆UI作成）",
+      "別ツールとの精度比較検証",
+      "週次定例での実装状況や検証結果の報告",
+      "PoC段階での精度改善の手法提案と実装、バグ改修",
+    ],
     achievements: ["未設定"],
   },
   {
     title: "RAG手法調査案件",
     period: "2025年5月 - 2025年8月",
-    teamSize: "〇人",
-    position: "未設定",
+    teamSize: "8人",
+    position: "調査員",
     tags: [
       "Python",
       "Streamlit",
@@ -95,12 +101,18 @@ export const projects: Project[] = [
   {
     title: "商標利用の申請フローの自動化ツールの開発",
     period: "2026年4月 - 2026年8月",
-    teamSize: "〇人",
-    position: "未設定",
-    tags: ["PowerApps", "PowerAutomate", "Dataverse"],
+    teamSize: "5人",
+    position: "エンジニア",
+    tags: ["PowerApps", "PowerAutomate", "Dataverse", "MicrosoftForms"],
     overview:
       "Microsoft Power Platformを用いた，商標利用の申請フローの自動化ツールの開発",
-    responsibilities: ["未設定"],
+    responsibilities: [
+      "設計業務（テーブル設計，機能設計書作成）",
+      "実装全般（テーブル構築、フロー構築，画面構築）",
+      "単体テスト，結合テスト",
+      "手順書作成",
+      "日次定例での作業進捗報告",
+    ],
     achievements: ["未設定"],
   },
 ];
