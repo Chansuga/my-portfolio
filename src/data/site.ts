@@ -1,3 +1,5 @@
+import type { DateParts } from "@/lib/date";
+
 export const profile = {
   name: "Yuki Suga",
   role: "Software Engineer",
@@ -43,32 +45,52 @@ export const career: CareerItem[] = [
 
 export type Project = {
   title: string;
-  description: string;
+  start: DateParts;
+  // 未入力の場合は参画中として扱う
+  end?: DateParts;
+  teamSize: string;
+  position: string;
   tags: string[];
-  period?: string;
-  link?: string;
-  repo?: string;
+  overview: string;
+  responsibilities: string[];
+  achievements: string[];
 };
 
 export const projects: Project[] = [
   {
-    title: "RAG専用のドキュメント前処理システムの研究開発",
-    description:
-      "PDFの社内ドキュメントを読み込んで、RAGのベクトル検索用のチャンクテキストを自動生成するシステムの開発にエンジニアとして携わりました。特にPDF内の図や表のテキスト化によるマルチモーダル化に力を入れました。",
+    title: "RAGシステム向けドキュメント構造化システムの研究開発",
+    start: { year: 2024, month: 4 },
+    end: { year: 2026, month: 3 },
+    teamSize: "4人~5人",
+    position: "開発エンジニア",
     tags: [
       "Python",
       "FastAPI",
-      "Streamlit",
+      "Gradio",
       "LangChain",
-      "PostgreSQL",
+      "PostgreSQL(pgvector)",
       "AzureOpenAI",
+      "AWS ECR",
     ],
-    period: "2024年4月 - 2025年4月",
+    overview:
+      "PDFの社内ドキュメントを読み込んで、RAGのベクトル検索用のチャンクテキストを自動生成するシステムの開発にエンジニアとして携わりました。特にPDF内の図や表のテキスト化によるマルチモーダル化に力を入れました。",
+    responsibilities: [
+      "実装全般（AWS ECRを利用したDockerイメージのビルド・登録・配布，デモ用RAGシステム＆UI作成）",
+      "別ツールとの精度比較検証",
+      "週次定例での実装状況や検証結果の報告",
+      "PoC段階での精度改善の手法提案と実装、バグ改修",
+    ],
+    achievements: [
+      "2024年10月に製品リリース",
+      "2025年6月に大手の通信インフラ企業にてツール導入",
+    ],
   },
   {
-    title: "RAG手法調査案件",
-    description:
-      "RAGシステムにおける，手法についての調査と精度比較検証を行う案件に作業メンバーとして携わりました。",
+    title: "RAG手法別の回答精度比較およびシステム実装検証",
+    start: { year: 2025, month: 5 },
+    end: { year: 2025, month: 8 },
+    teamSize: "8人",
+    position: "調査員",
     tags: [
       "Python",
       "Streamlit",
@@ -80,14 +102,62 @@ export const projects: Project[] = [
       "Ragas",
       "Neo4j",
     ],
-    period: "2025年5月 - 2025年8月",
+    overview:
+      "RAGシステムにおける，手法についての調査と精度比較検証を行う案件に作業メンバーとして携わりました。",
+    responsibilities: [
+      "調査・技術検証",
+      "システム実装・環境構築",
+      "コード管理・運用",
+    ],
+    achievements: ["未設定"],
   },
   {
-    title: "商標利用の申請フローの自動化ツールの開発",
-    description:
+    title:
+      "Power Platformを活用した商標申請フロー自動化による業務プロセスの刷新",
+    start: { year: 2026, month: 4 },
+    end: { year: 2026, month: 8 },
+    teamSize: "5人",
+    position: "エンジニア",
+    tags: ["PowerApps", "PowerAutomate", "Dataverse", "MicrosoftForms"],
+    overview:
       "Microsoft Power Platformを用いた，商標利用の申請フローの自動化ツールの開発",
-    tags: ["PowerApps", "PowerAutomate", "Dataverse"],
-    period: "2026年4月 - 2026年8月",
+    responsibilities: [
+      "設計業務（テーブル設計，機能設計書作成）",
+      "実装全般（テーブル構築、フロー構築，画面構築）",
+      "単体テスト，結合テスト",
+      "手順書作成",
+      "日次定例での作業進捗報告",
+    ],
+    achievements: [
+      "手作業に依存する商標申請業務を9割程度自動化し、リードタイム大幅短縮",
+    ],
+  },
+  {
+    title: "RAGシステム開発（造船分野、建築分野の2案件）",
+    start: { year: 2025, month: 9 },
+    end: { year: 2026, month: 5 },
+    teamSize: "5人",
+    position: "エンジニア",
+    tags: [
+      "Python",
+      "Docker",
+      "PosgreSQL",
+      "FastAPI",
+      "GitHub",
+      "Azure",
+      "React/TypeScript",
+      "GitHub Copilot",
+    ],
+    overview:
+      "Microsoft Power Platformを用いた，商標利用の申請フローの自動化ツールの開発",
+    responsibilities: [
+      "PoCのためのベースRAGシステムの実装（LangChain×PostgreSQL（pgvector））",
+      "分野特化のための追加機能実装",
+      "お客様用デモ環境の構築",
+    ],
+    achievements: [
+      "検証フェーズから導入に向けた分野特化型のRAGシステムの開発フェーズに進むことができた",
+    ],
   },
 ];
 
@@ -198,7 +268,7 @@ export const skills: SkillGroup[] = [
 export type Certification = {
   name: string;
   org: string;
-  acquired: { year: number; month: number; day?: number };
+  acquired: DateParts;
 };
 
 export const certifications: Certification[] = [

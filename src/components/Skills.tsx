@@ -1,14 +1,11 @@
 import Chip from "@/components/Chip";
 import SectionHeading from "@/components/SectionHeading";
-import { certifications, skills, type Certification } from "@/data/site";
+import { certifications, skills } from "@/data/site";
+import { dateSortKey, formatDate } from "@/lib/date";
 import { styles } from "./Skills.styles";
 
-// 日が未入力の場合は、同じ月の中で先頭に並べる
-const sortKey = ({ year, month, day = 0 }: Certification["acquired"]) =>
-  (year * 12 + month) * 32 + day;
-
 const sortedCertifications = [...certifications].sort(
-  (a, b) => sortKey(a.acquired) - sortKey(b.acquired),
+  (a, b) => dateSortKey(a.acquired) - dateSortKey(b.acquired),
 );
 
 export default function Skills() {
@@ -64,8 +61,7 @@ export default function Skills() {
                 <p className={styles.certName}>{cert.name}</p>
                 <p className={styles.certOrg}>{cert.org}</p>
                 <p className={styles.certDate}>
-                  取得時期：{cert.acquired.year}年{cert.acquired.month}月
-                  {cert.acquired.day ? `${cert.acquired.day}日` : ""}
+                  取得時期：{formatDate(cert.acquired)}
                 </p>
               </div>
             </li>
