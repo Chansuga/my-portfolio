@@ -173,6 +173,15 @@ export type Work = {
 
 export const works: Work[] = [
   {
+    title: "ARiSE COFFEE 公式サイト",
+    description:
+      "ボードゲームカフェの公式Webサイト。Astroで構築した静的サイトで，Pages CMSによる管理画面からお店側でコンテンツを更新でき，GitHub Actionsで自動デプロイ",
+    tags: ["TypeScript", "Astro", "GitHub Actions", "Pages CMS"],
+    period: "2026年11月 -",
+    link: "https://arise-coffee.jp/",
+    image: "/arise-coffee.webp",
+  },
+  {
     title: "ポートフォリオサイト",
     description:
       "このサイト。経歴・プロジェクト・スキルなどをまとめた静的サイトで，GitHub Actionsでlint・型チェック・ビルドを行い，GitHub Pagesへ自動デプロイ",
